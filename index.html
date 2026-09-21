@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca Virtual 2026</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js" defer></script>
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Biblioteca Virtual</h1>
+        <p class="subtitulo">Gestiona tu catalogo de libros</p>
+    </header>
+
+    <main>
+        <section class="panel-formulario">
+            <h2>Agregar nuevo libro</h2>
+            <form id="form-libro">
+                <input type="text" id="input-titulo" placeholder="Titulo" required>
+                <input type="text" id="input-autor" placeholder="Autor" required>
+                <input type="text" id="input-genero" placeholder="Genero" required>
+                <input type="number" id="input-paginas" placeholder="Paginas" min="1" required>
+                <button type="submit" id="btn-agregar">+ Agregar libro</button>
+            </form>
+        </section>
+
+        <section class="panel-controles">
+            <input type="text" id="input-busqueda" placeholder="Buscar por titulo...">
+            <select id="filtro-genero">
+                <option value="">Todos los generos</option>
+            </select>
+            <button id="btn-resumen">Ver resumen</button>
+        </section>
+
+        <section class="panel-estadisticas">
+            <div class="stat">
+                <span class="stat-numero" id="stat-total">0</span>
+                <span class="stat-label">Libros</span>
+            </div>
+            <div class="stat">
+                <span class="stat-numero" id="stat-paginas">0</span>
+                <span class="stat-label">Paginas totales</span>
+            </div>
+            <div class="stat">
+                <span class="stat-numero" id="stat-generos">0</span>
+                <span class="stat-label">Generos</span>
+            </div>
+        </section>
+
+        <section class="panel-lista">
+            <h2>Catalogo</h2>
+            <div id="contenedor-libros"></div>
+            <p id="mensaje-vacio" class="oculto">No hay libros para mostrar.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Biblioteca Virtual &copy; 2026</p>
+    </footer>
+</body>
+</html>

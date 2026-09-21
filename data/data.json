@@ -1,0 +1,7 @@
+[
+  { "id": 1, "titulo": "Harry Potter", "autor": "J. K. Rowling", "genero": "Fantasia", "paginas": 350 },
+  { "id": 2, "titulo": "El Senor de los Anillos", "autor": "J. R. R. Tolkien", "genero": "Fantasia", "paginas": 1200 },
+  { "id": 3, "titulo": "1984", "autor": "George Orwell", "genero": "Ciencia ficcion", "paginas": 328 },
+  { "id": 4, "titulo": "El Principito", "autor": "Antoine de Saint-Exupery", "genero": "Fabula", "paginas": 96 },
+  { "id": 5, "titulo": "Dracula", "autor": "Bram Stoker", "genero": "Terror", "paginas": 418 }
+]

@@ -1,0 +1,216 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    min-height: 100vh;
+    color: #333;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    color: white;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+}
+
+.subtitulo {
+    opacity: 0.85;
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+section {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+section h2 {
+    color: #1e3c72;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+#form-libro {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 10px;
+}
+
+input, select, button {
+    padding: 10px 14px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.2s;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #2a5298;
+}
+
+button {
+    background: #2a5298;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    grid-column: 1 / -1;
+}
+
+button:hover {
+    background: #1e3c72;
+    transform: translateY(-2px);
+}
+
+.panel-controles {
+    display: grid;
+    grid-template-columns: 2fr 1fr auto;
+    gap: 10px;
+}
+
+.panel-controles button {
+    grid-column: auto;
+    background: #28a745;
+}
+
+.panel-controles button:hover {
+    background: #1e7e34;
+}
+
+.panel-estadisticas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    text-align: center;
+}
+
+.stat {
+    background: #f0f4fa;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-numero {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #2a5298;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: #666;
+    text-transform: uppercase;
+}
+
+.libro-card {
+    background: #f8f9fc;
+    border-left: 5px solid #2a5298;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    animation: aparecer 0.3s ease;
+}
+
+@keyframes aparecer {
+    from { opacity: 0; transform: translateX(-20px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+.libro-info h3 {
+    color: #1e3c72;
+    margin-bottom: 4px;
+}
+
+.libro-info p {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.libro-info .genero {
+    display: inline-block;
+    background: #2a5298;
+    color: white;
+    padding: 2px 10px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    margin-top: 5px;
+}
+
+.btn-eliminar {
+    background: #dc3545;
+    padding: 8px 14px;
+    font-size: 0.85rem;
+    grid-column: auto;
+}
+
+.btn-eliminar:hover {
+    background: #a71d2a;
+}
+
+.oculto {
+    display: none;
+}
+
+#mensaje-vacio {
+    text-align: center;
+    color: #888;
+    padding: 30px;
+    font-style: italic;
+}
+
+footer {
+    text-align: center;
+    color: white;
+    margin-top: 30px;
+    opacity: 0.8;
+}
+
+@media (max-width: 600px) {
+    .panel-controles {
+        grid-template-columns: 1fr;
+    }
+    .libro-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+.cargando {
+    text-align: center;
+    padding: 2rem;
+    font-size: 1.2rem;
+    color: #666;
+    font-style: italic;
+}
+
+.error {
+    text-align: center;
+    padding: 2rem;
+    color: #dc3545;
+    font-weight: bold;
+}

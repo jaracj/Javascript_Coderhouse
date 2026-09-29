@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO -->
+  <title>La Lupa Lectora | Librería — Catálogo online y envíos a todo el país</title>
+  <meta name="description" content="Librería La Lupa Lectora: novela, cuento, poesía y ensayo en ediciones cuidadas. Buscá por título, autor o género, armá tu compra y recibí tu pedido en casa.">
+  <meta name="keywords" content="librería, libros, comprar libros, novela, cuento, poesía, envíos">
+  <meta name="author" content="La Lupa Lectora">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="La Lupa Lectora — Librería">
+  <meta property="og:description" content="Los libros eligen al lector. Catálogo online con envíos a todo el país.">
+  <meta property="og:locale" content="es_AR">
+
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+
+  <!-- Tipografías -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;0,9..144,900;1,9..144,500&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Iconos de Google -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+  <!-- Toastify css -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js@1.12.0/src/toastify.min.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/estilos.css">
+
+  <!-- SweetAlert / Toastify js -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/toastify-js@1.12.0/src/toastify.js" defer></script>
+
+  <!-- Scripts -->
+  <script src="js/principal.js" defer></script>
+  <script src="js/carrito.js" defer></script>
+</head>
+
+<body>
+
+  <!-- Navegación -->
+  <header class="cabecera" id="inicio">
+    <nav class="barra-navegacion contenedor" aria-label="Navegación principal">
+      <a class="marca" href="#inicio">
+        <span class="material-symbols-outlined marca-logo">menu_book</span>
+        <span class="marca-texto">La Lupa Lectora<small>librería · desde 1994</small></span>
+      </a>
+
+      <ul class="menu-principal" id="menu-principal">
+        <li><a href="#catalogo">Catálogo</a></li>
+        <li><a href="#novedades">Novedades</a></li>
+        <li><a href="#visita">Visitanos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+
+      <div class="botones-cabecera">
+        <button class="boton-favoritos-cabecera" id="boton-favoritos" aria-label="Ver tus favoritos">
+          <span class="material-symbols-outlined">favorite</span>
+          <span class="contador-favoritos oculto" id="contador-favoritos">0</span>
+        </button>
+
+        <button class="boton-carrito" id="boton-carrito" aria-label="Abrir tu carrito de compras">
+          <span class="material-symbols-outlined">shopping_cart</span>
+          <span>Carrito</span>
+          <span class="contador-carrito oculto" id="contador-carrito">0</span>
+        </button>
+
+        <button class="boton-menu-movil" id="boton-menu-movil" aria-expanded="false" aria-label="Abrir menú">
+          <span class="material-symbols-outlined">menu</span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Escaparate -->
+    <section class="escaparate" aria-label="Presentación de la librería">
+      <div class="escaparate-texto contenedor">
+        <p class="sobretitulo">Librería independiente · Barrio de las Letras</p>
+        <h1>Los libros <em>eligen</em> al lector.</h1>
+        <p class="entradas">
+          Catálogo completo, primeras ediciones y clásicos que siempre vuelven.
+          Buscá por título, autor o género, y armá tu carrito sin moverte de casa.
+        </p>
+        <div class="escaparate-acciones">
+          <a class="boton boton-primario" href="#catalogo">Explorar catálogo</a>
+          <a class="boton boton-contorno" href="#novedades">Ver la mesa de novedades</a>
+        </div>
+        <ul class="escaparate-cifras">
+          <li><strong id="cifra-titulos">—</strong><span>títulos en catálogo</span></li>
+          <li><strong id="cifra-generos">—</strong><span>géneros reunidos</span></li>
+          <li><strong>4.900+</strong><span>lectores felices</span></li>
+        </ul>
+      </div>
+
+      <div class="escaparate-visual" aria-hidden="true">
+        <div class="pila-libros">
+          <img class="portada-escaparate portada-atras" alt="">
+          <img class="portada-escaparate portada-media" alt="">
+          <img class="portada-escaparate portada-frente" alt="">
+        </div>
+      </div>
+    </section>
+
+    <!-- "Beneficios" -->
+    <div class="cinta-ofertas" aria-hidden="true">
+      <div class="cinta-desplazante">
+        <span>Envío gratis desde $30.000</span><i>*</i>
+        <span>3 y 6 cuotas sin interés</span><i>*</i>
+        <span>Retiro por el local en el día</span><i>*</i>
+        <span>Devoluciones sin cargo por 30 días</span><i>*</i>
+        <span>Envío gratis desde $30.000</span><i>*</i>
+        <span>3 y 6 cuotas sin interés</span><i>*</i>
+        <span>Retiro por el local en el día</span><i>*</i>
+        <span>Devoluciones sin cargo por 30 días</span><i>*</i>
+      </div>
+    </div>
+
+    <!-- Catálogo -->
+    <section class="seccion-catalogo contenedor" id="catalogo">
+      <header class="cabecera-seccion">
+        <div>
+          <p class="sobretitulo">El catálogo</p>
+          <h2 class="titulo-seccion">Estanterías para todos los antojos</h2>
+        </div>
+        <p class="contador-resultados" id="contador-resultados" aria-live="polite">Cargando catálogo…</p>
+      </header>
+
+      <div class="barra-filtros">
+        <label class="buscador">
+          <span class="material-symbols-outlined buscador-icono">search</span>
+          <input type="search" id="campo-busqueda" placeholder="Buscá por título o autor…" autocomplete="off">
+        </label>
+        <div class="chips-genero" id="chips-genero" role="group" aria-label="Filtrar por género"></div>
+        <label class="selector-orden">
+          <span>Ordenar</span>
+          <select id="selector-orden">
+            <option value="relevancia">Relevancia</option>
+            <option value="precio-asc">Precio: menor a mayor</option>
+            <option value="precio-desc">Precio: mayor a menor</option>
+            <option value="titulo">Título A–Z</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="grilla-libros" id="grilla-libros"></div>
+
+      <div class="estado-vacio oculto" id="estado-vacio">
+        <span class="material-symbols-outlined estado-vacio-icono">search_off</span>
+        <h3>No encontramos ese libro…</h3>
+        <p>Probá con otra palabra o mirá el resto de las estanterías.</p>
+        <button class="boton boton-contorno" id="boton-limpiar-busqueda">Limpiar búsqueda</button>
+      </div>
+
+      <div class="estado-error oculto" id="estado-error">
+        <span class="material-symbols-outlined estado-error-icono">error_outline</span>
+        <h3>Se nos cayó la biblioteca</h3>
+        <p>No pudimos cargar el catálogo. Revisá tu conexión e intentá de nuevo.</p>
+        <button class="boton boton-primario" id="boton-reintentar">Reintentar</button>
+      </div>
+    </section>
+
+    <!-- Cita Editorial -->
+    <div class="cinta-citas" aria-hidden="true">
+      <div class="cinta-desplazante">
+        <span>«Un lector vive mil vidas antes de morir»</span><i>*</i>
+        <span>«La lectura es una conversación»</span><i>*</i>
+        <span>«Toda librería es un laberinto»</span><i>*</i>
+        <span>«Los libros son espejos»</span><i>*</i>
+        <span>«Un lector vive mil vidas antes de morir»</span><i>*</i>
+        <span>«La lectura es una conversación»</span><i>*</i>
+        <span>«Toda librería es un laberinto»</span><i>*</i>
+        <span>«Los libros son espejos»</span><i>*</i>
+      </div>
+    </div>
+
+    <!-- Novedades -->
+    <section class="seccion-novedades contenedor" id="novedades">
+      <header class="cabecera-seccion">
+        <div>
+          <p class="sobretitulo">Recién llegados</p>
+          <h2 class="titulo-seccion">La mesa de novedades</h2>
+        </div>
+        <div class="flechas-novedades">
+          <button id="flecha-izquierda" aria-label="Desplazar hacia la izquierda">
+            <span class="material-symbols-outlined">arrow_back</span>
+          </button>
+          <button id="flecha-derecha" aria-label="Desplazar hacia la derecha">
+            <span class="material-symbols-outlined">arrow_forward</span>
+          </button>
+        </div>
+      </header>
+      <div class="estante-novedades" id="estante-novedades"></div>
+    </section>
+
+    <!-- Visita -->
+    <section class="seccion-visita" id="visita">
+      <div class="contenedor visita-contenido">
+        <p class="sobretitulo clara">El local</p>
+        <h2 class="titulo-seccion">El ritual de venir a buscarlo</h2>
+        <p class="visita-texto">
+          Galería del Pasaje, local 3. Café de especialidad en la puerta, sillones para hojear
+          sin apuro y una librera que recomienda mejor que cualquier algoritmo.
+          <strong>Si lo pedís antes de las 18 h, lo tenés listo para retirar el mismo día.</strong>
+        </p>
+        <a class="boton boton-ambar" href="#contacto">Cómo llegar</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="pie-pagina" id="contacto">
+    <div class="contenedor pie-contenido">
+      <div class="pie-columna pie-marca">
+        <p class="pie-logo">La Lupa Lectora</p>
+        <p>Librería independiente desde 1994. Leemos todo lo que vendemos y vendemos todo lo que leímos.</p>
+      </div>
+      <div class="pie-columna">
+        <h3>Horarios</h3>
+        <p>Lunes a viernes · 9 a 20 h</p>
+        <p>Sábados · 10 a 14 h</p>
+        <p>Domingos · cerramos para leer</p>
+      </div>
+      <div class="pie-columna">
+        <h3>Visitanos</h3>
+        <p>Galería del Pasaje, local 3</p>
+        <p>Calle de los Tipógrafos 742</p>
+        <p>Buenos Aires, Argentina</p>
+      </div>
+      <div class="pie-columna">
+        <h3>Boletín de novedades</h3>
+        <p>Un correo por semana, cero spam.</p>
+        <form class="formulario-boletin" id="formulario-boletin">
+          <input type="email" id="campo-boletin" placeholder="tu@correo.com" required aria-label="Correo electrónico">
+          <button type="submit" class="boton boton-ambar">Suscribirme</button>
+        </form>
+      </div>
+    </div>
+    <button class="boton-reiniciar" id="boton-reiniciar">Reiniciar mis datos</button>
+    <p class="pie-final">© 2026 La Lupa Lectora · Proyecto final del curso de JavaScript Coderhouse</p>
+  </footer>
+
+  <!-- Carrito -->
+  <div class="velo oculto" id="velo"></div>
+
+  <aside class="panel-carrito" id="panel-carrito" aria-hidden="true" aria-label="Tu carrito de compras">
+    <header class="panel-cabecera">
+      <h2>Tu carrito <span id="titulo-cantidad"></span></h2>
+      <button class="boton-cerrar" id="boton-cerrar-carrito" aria-label="Cerrar el carrito">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+    </header>
+
+    <div class="panel-cuerpo" id="panel-cuerpo"></div>
+
+    <footer class="panel-pie">
+      <div class="barra-envio" id="barra-envio">
+        <p id="texto-envio"></p>
+        <div class="barra-progreso"><span id="progreso-envio"></span></div>
+      </div>
+      <dl class="resumen-totales">
+        <div><dt>Subtotal</dt><dd id="resumen-subtotal">$0</dd></div>
+        <div><dt>Envío</dt><dd id="resumen-envio">—</dd></div>
+        <div class="fila-total"><dt>Total</dt><dd id="resumen-total">$0</dd></div>
+      </dl>
+      <button class="boton boton-ambar boton-confirmar" id="boton-confirmar">Finalizar compra</button>
+      <button class="boton-vaciar" id="boton-vaciar">Vaciar carrito</button>
+    </footer>
+  </aside>
+  
+</body>
+</html>
